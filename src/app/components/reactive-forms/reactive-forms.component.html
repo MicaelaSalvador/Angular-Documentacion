@@ -1,0 +1,27 @@
+<br>
+<form  [formGroup]="profileForm">
+    <label for="first-name"> First Name : </label>
+    <input id="first-name" type="text" formControlName="firstName" >
+
+
+    <label for="last-name"> Last Name : </label>
+    <input id="last-name" type="text" formControlName="lastName" >
+
+    <div formArrayName="address">
+        <h2>Address</h2>
+
+        <label for="street"> Street : </label>
+        <input id="street" type="text" formArrayName="street">
+
+        <label for="city"> City : </label>
+        <input id="city" type="text" formArrayName="city">
+
+        <label for="state"> State : </label>
+        <input id="city" type="text" formArrayName="city">
+
+    </div>
+    
+</form>
+<br>
+<br>
+<button (click)="updateProfile()" > Update profile</button>
